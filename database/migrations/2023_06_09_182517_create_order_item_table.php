@@ -20,10 +20,10 @@ return new class extends Migration
 							->onUpdate('CASCADE')
 							->onDelete('CASCADE');
 						$table->unsignedBigInteger('productID');
-						$table->foreign('productID');
+						$table->foreign('productID')
 							->references('id')
 							->on('products')
-							->onUpdate('CASCADE');
+							->onUpdate('CASCADE')
 							->onDelete('CASCADE');
 						$table->integer('qty');
         });
